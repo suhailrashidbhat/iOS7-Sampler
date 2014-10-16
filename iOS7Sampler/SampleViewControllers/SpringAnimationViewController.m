@@ -27,11 +27,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    [self updateLabels];
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
     orgPos = self.imageView.center;
     targetPos = CGPointMake(orgPos.x + 240, orgPos.y);
-    
-    [self updateLabels];
 }
 
 - (void)didReceiveMemoryWarning
